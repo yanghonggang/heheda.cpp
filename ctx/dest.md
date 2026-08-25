@@ -53,7 +53,7 @@ llama-cli -m qwen3-14b-q4_k_m.gguf \
 ```bash
 llama-server -m qwen3-14b-q4_k_m.gguf \
   -ngl 99 \              # GPU层数
-  --flash-attn \         # FlashAttention2，减少显存占用
+  --flash-attn on \         # FlashAttention2，减少显存占用
   -c 16384 \             # 上下文长度
   --cache-type-k q8_0 \  # K cache 量化
   --cache-type-v q8_0 \  # V cache 量化
@@ -121,7 +121,7 @@ KV Cache (c=32768):  ~5-7 GB  ⚠️ 过大
   -m qwen3.gguf \
   -ngl 99 \
   -c 16384 \
-  --flash-attn \
+  --flash-attn on \
   --cache-type-k q8_0 \
   --cache-type-v q8_0 \
   --jinja \
@@ -138,7 +138,7 @@ KV Cache (c=32768):  ~5-7 GB  ⚠️ 过大
   -m qwen3-14b-q5_k_m.gguf \
   -ngl 99 \
   -c 16384 \
-  --flash-attn \
+  --flash-attn on \
   --jinja \
   --host 0.0.0.0 \
   --port 9999
@@ -153,7 +153,7 @@ KV Cache (c=32768):  ~5-7 GB  ⚠️ 过大
   -m qwen3-14b-q8_0.gguf \
   -ngl 40 \
   -c 8192 \
-  --flash-attn \
+  --flash-attn on \
   --jinja \
   --host 0.0.0.0 \
   --port 9999
@@ -223,7 +223,7 @@ fi
 llama-server \
   -m "$MODEL_PATH" \
   -ngl 99 \
-  --flash-attn \
+  --flash-attn on \
   -c 16384 \
   --cache-type-k q8_0 \
   --cache-type-v q8_0 \

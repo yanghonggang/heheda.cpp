@@ -1,0 +1,170 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+
+# --- From .gitignore (uncomment to exclude) ---
+
+# *.a
+# *.bat
+# *.bin
+# *.d
+# *.dll
+# *.dot
+# *.etag
+# *.exe
+# *.gcda
+# *.gcno
+# *.gcov
+# *.gguf
+# *.gguf.json
+# *.lastModified
+# *.metallib
+# *.o
+# *.so
+# *.swp
+# *.tmp
+# *.DS_Store
+# /.cache/
+# /.ccls-cache/
+# /.direnv/
+# /.envrc
+# /.idea/
+# /.swiftpm
+# /.vs/
+# /.vscode/
+# /nppBackup
+# /gcovr-report/
+# /lcov-report/
+# /tags
+# /.build/
+# /build*
+# /release
+# /debug
+# /libllama.so
+# /llama-*
+# /vulkan-shaders-gen
+# /rpc-server
+# /out/
+# /tmp/
+# /autogen-*.md
+# /common/build-info.cpp
+# /main
+# /server
+# !/.github/workflows/*.yml
+# /models/*
+# /models-mnt
+# !/models/.editorconfig
+# !/models/ggml-vocab-*.gguf*
+# !/models/templates
+# /zig-out/
+# /zig-cache/
+# /examples/jeopardy/results.txt
+# /tools/server/*.css.hpp
+# /tools/server/*.html.hpp
+# /tools/server/*.js.hpp
+# /tools/server/*.mjs.hpp
+# /tools/server/*.gz.hpp
+# !/build_64.sh
+# !/examples/*.bat
+# !/examples/*/*.kts
+# !/examples/*/*/*.kts
+# !/examples/sycl/*.bat
+# !/examples/sycl/*.sh
+# /.venv
+# */poetry.lock
+# poetry.toml
+# poetry.lock
+# uv.lock
+# flake.lock
+# /result
+# /tests/test-backend-ops
+# /tests/test-double-float
+# /tests/test-grad0
+# /tests/test-grammar-parser
+# /tests/test-llama-grammar
+# /tests/test-opt
+# /tests/test-quantize-fns
+# /tests/test-quantize-perf
+# /tests/test-rope
+# /tests/test-sampling
+# /tests/test-tokenizer-0
+# /tests/test-tokenizer-1-bpe
+# /tests/test-tokenizer-1-spm
+# !/scripts/install-oneapi.bat
+# /hellaswag_val_full.txt
+# /winogrande-debiased-eval.csv
+# /wikitext-2-raw/
+# /lora-tests
+# /run-vim.sh
+# /run-chat.sh
+# /run-spec.sh
+# /.ccache/
+# /*.code-workspace
+# /.windsurf/
+# a.out.*
+# AGENTS.local.md
+# .pi/SYSTEM.md
+
+# --- Detected directories (uncomment to exclude) ---
+
+# Tool's own analysis data — never analyze
+.ua/
+
+# benches/
+# docs/
+# examples/
+# scripts/
+tests/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# JS / TS
+# *.test.*
+# *.spec.*
+# *.snap
+# C# / .NET
+# **/*Tests.cs
+# **/*Test.cs
+# **/*Fixture.cs
+# **/*.Tests.csproj
+# Java / Kotlin
+# **/src/test/**
+# **/*Test.java
+# **/*IT.java
+# **/*Spec.kt
+# Go
+# **/*_test.go
+# C++
+**/*_test.cc
+**/*_test.cpp
+**/*_test.cxx
+**/*Test.cc
+**/*Test.cpp
+**/*_unittest.cc
+**/*_unittest.cpp
+**/*_browsertest.cc
+**/*_benchmark.cc
+**/*Benchmark.cpp
+# Python
+**/test_*.py
+**/*_test.py
+**/tests.py
+**/conftest.py
+# Rust
+# **/tests.rs
+# **/test_*.rs
+# **/*_test.rs
+# **/bench_*.rs
+# **/*_bench.rs
+# Ruby
+# **/*_spec.rb
+# **/*_test.rb
+# **/test_*.rb
+# **/spec_helper.rb
+# **/test_helper.rb
+# **/rails_helper.rb
